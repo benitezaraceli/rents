@@ -7,5 +7,10 @@ CREATE TABLE car (
       status                      text NOT NULL
 );
 
-CREATE RULE car_opaque_rule AS ON INSERT TO car
-DO INSTEAD NOTHING;
+CREATE OR REPLACE RULE car_prevent_change AS
+	ON UPDATE TO 
+		car
+	WHERE 
+		OLD.patent != NEW.patent
+		OR OLD.creation_timestamp != NEW.creation_timestamp
+	DO INSTEAD NOTHING;

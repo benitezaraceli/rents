@@ -1,5 +1,5 @@
 software alquiler de autos
-registrar autos marca, modelo, año, patente, descripcion (color etc), estado
+registrar autos: marca, modelo, año, patente, descripcion (color etc), estado
 clientes: dni, nombre y apellido, direccion, telefono, mail
 registrar alquileres, autos disponibles, fecha de alquiler y devolucion y
 persona q lo alquila
